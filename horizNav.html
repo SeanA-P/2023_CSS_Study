@@ -14,8 +14,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #000;
-
+            background-color: #333;
         }
 
         li{
@@ -26,7 +25,7 @@
 
         li a {
             display: block;
-            color: mintcream;
+            color: white;
             text-align: center;
             text-decoration: none;
             padding: 14px 16px;
@@ -35,8 +34,7 @@
         li a:hover{
             background-color: #111;
         }
-
-        /* optional for cool nav */
+        /* Optional Active Class for Awesom Navs */
         .active{
             background-color: darkgreen;
         }
@@ -44,6 +42,48 @@
         .advertise{
             float: right;
             background-color: red;
+        }
+
+        .dropdown{
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn{
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            margin: 0;
+            font-family: inherit;
+        }
+
+        .dropdown-content{
+            display: none;
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+            min-width: 160px;
+            background-color: #f9f9f9;
+            position: absolute;
+        }
+
+        .dropdown-content a{
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content{
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
         }
 
     </style>
@@ -54,14 +94,28 @@
         <!-- The current page gets the active class -->
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Who We Are</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </li>
         <li><a href="#">Products</a></li>
         <li><a href="#">Mailing List</a></li>
         <li><a href="#">Contact Us</a></li>
         <li class="advertise"><a href="#">Give Me Money</a></li>
-
-
-
     </ul>
+
+
+    <br />
+    <br />
+    <!-- <ul>
+        <li><a href="http://www.google.com">Gooogle</a></li>
+    </ul> -->
 </div>
 </body>
 </html>
